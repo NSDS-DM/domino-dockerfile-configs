@@ -23,7 +23,7 @@ Variable Name    Value
 GH_TOKEN    github_token
 
 | Variable Name | Value |
-|---|---|
+| --- | --- |
 | GH_TOKEN | github_token |
 
 # Notes
