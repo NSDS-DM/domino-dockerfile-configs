@@ -54,7 +54,7 @@ RUN chmod +x /var/opt/domino-dockerfile-configs/general/install-jupyter.sh && \
     /var/opt/domino-dockerfile-configs/general/install-jupyter.sh
 
 # Install Seurat ecosystem
-RUN chmod +x /var/opt/domino-dockerfile-configs/general/install-utils.sh && \
+RUN chmod +x /var/opt/domino-dockerfile-configs/single-cell/install-seurat.sh && \
     /var/opt/domino-dockerfile-configs/single-cell/install-seurat.sh $GH_TOKEN
 ```
 
