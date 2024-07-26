@@ -27,11 +27,12 @@ Run Setup Scripts sections)
 
 | Variable Name | Value |
 | --- | --- |
-| GH_TOKEN | github_token |
+| GH_TOKEN | github_token123ABC |
 
 ### Alternate option
 ```bash
-ARG GH_TOKEN='github_token'
+ARG GH_TOKEN=github_token123ABC
+ARG GH_TOKEN='github_token123ABC'    # can quote value, but best to leave unqouted for consistency to GUI key,value option (preferred)
 ```
 
 ## Install
@@ -46,7 +47,8 @@ RUN chmod +x /var/opt/domino-dockerfile-configs/single-cell/install-seurat.sh &&
     /var/opt/domino-dockerfile-configs/single-cell/install-seurat.sh $GH_TOKEN
 
 # Other
-RUN chmod +x /var/opt/domino-dockerfile-configs/other-tools/install.sh && /var/opt/domino-dockerfile-configs/other-tools/install.sh
+RUN chmod +x /var/opt/domino-dockerfile-configs/other-tools/install.sh && \
+    /var/opt/domino-dockerfile-configs/other-tools/install.sh
 ```
 
 # Notes
