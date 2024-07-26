@@ -51,4 +51,4 @@ RUN /var/opt/domino-dockerfile-configs/install-seurat.sh $GH_TOKEN
 
 # Notes
 
-currently, scripts do not check for unbound variables, e.g. do not differentiate between ./install.sh and ./install.sh '<var1>' '<var2>'
+currently, scripts do not check for unbound variables, e.g. do not differentiate between ./install.sh and ./install.sh \<var1\> '<var2>'
