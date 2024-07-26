@@ -30,6 +30,7 @@ Run Setup Scripts sections)
 | GH_TOKEN | github_token123ABC |
 
 ### Alternate option
+Add to your Dockerfile instructions:
 ```bash
 ARG GH_TOKEN=github_token123ABC
 ARG GH_TOKEN='github_token123ABC'    # can quote value, but best to leave unqouted for consistency to GUI key,value option (preferred)
