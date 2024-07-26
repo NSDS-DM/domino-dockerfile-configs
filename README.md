@@ -15,6 +15,7 @@ RUN mkdir -p /var/opt/domino-dockerfile-configs && \
     https://raw.githubusercontent.com/NSDS-DM/domino-dockerfile-configs/main/single-cell/install-seurat.sh && \
     chmod +x /var/opt/domino-dockerfile-configs/install-seurat.sh
 RUN /var/opt/domino-dockerfile-configs/install-seurat.sh $GH_TOKEN
+```
 
 # Or add a name,value key pair to the Environment variables section of environment definition (below Dockerfile Instruction, Pluggable Workspace Tools and 
 Run Setup Scripts sections)
