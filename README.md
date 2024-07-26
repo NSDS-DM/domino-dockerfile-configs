@@ -40,8 +40,6 @@ ARG GH_TOKEN='github_token123ABC'    # can quote value, but best to leave unqout
 
 ## Install
 
-### Alternate option
-
 Add the desired workspaces to your Dockerfile instructions:
 
 ```bash
