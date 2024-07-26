@@ -17,15 +17,22 @@ RUN mkdir -p /var/opt/domino-dockerfile-configs && \
 RUN /var/opt/domino-dockerfile-configs/install-seurat.sh $GH_TOKEN
 ```
 
-# Or add a name,value key pair to the Environment variables section of environment definition (below Dockerfile Instruction, Pluggable Workspace Tools and 
+Or add a name,value key pair to the Environment variables section of environment definition (below Dockerfile Instruction, Pluggable Workspace Tools and 
 Run Setup Scripts sections)
-
-Variable Name    Value
-GH_TOKEN    github_token
 
 | Variable Name | Value |
 | --- | --- |
 | GH_TOKEN | github_token |
+```bash
+# Note: Make sure you are using the latest release if you'd like the latest version of the workspaces
+# https://github.com/dominodatalab/workspace-configs/releases/latest
+ARG GH_TOKEN    # variable is set by Domino during image build
+RUN mkdir -p /var/opt/domino-dockerfile-configs && \
+    wget -O /var/opt/domino-dockerfile-configs/install-seurat.sh \
+    https://raw.githubusercontent.com/NSDS-DM/domino-dockerfile-configs/main/single-cell/install-seurat.sh && \
+    chmod +x /var/opt/domino-dockerfile-configs/install-seurat.sh
+RUN /var/opt/domino-dockerfile-configs/install-seurat.sh $GH_TOKEN
+```
 
 # Notes
 
