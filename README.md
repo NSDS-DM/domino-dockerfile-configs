@@ -19,6 +19,7 @@ RUN mkdir -p /var/opt/domino-dockerfile-configs && \
     rm -rf /tmp/main.zip /tmp/domino-dockerfile-configs-main
 ```
 
+
 ## Setting access tokens or other variables
 
 ### Preferred option
@@ -37,6 +38,7 @@ Add to your Dockerfile instructions:
 ARG GH_TOKEN=github_token123ABC
 ARG GH_TOKEN='github_token123ABC'    # can quote value, but best to leave unqouted for consistency to GUI key,value option (preferred)
 ```
+
 
 ## Install
 
