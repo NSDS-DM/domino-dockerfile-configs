@@ -1,13 +1,13 @@
 # domino-dockerfile-configs
 helper scripts to aid building custom environments
 
-
 # Usage
 
 ## Setup
 
 In your docker file, you are going to want to download this repo and then use the install scripts for the tools you'd like to use.
 Make sure you using the latest tag/release. **Do not use the develop branch.**
+
 ```bash
 # Note: Make sure you are using the latest release if you'd like the latest version of the workspaces
 # https://github.com/dominodatalab/workspace-configs/releases/latest
@@ -30,7 +30,9 @@ Run Setup Scripts sections)
 | GH_TOKEN | github_token123ABC |
 
 ### Alternate option
+
 Add to your Dockerfile instructions:
+
 ```bash
 ARG GH_TOKEN=github_token123ABC
 ARG GH_TOKEN='github_token123ABC'    # can quote value, but best to leave unqouted for consistency to GUI key,value option (preferred)
