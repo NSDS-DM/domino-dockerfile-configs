@@ -45,13 +45,17 @@ ARG GH_TOKEN='github_token123ABC'    # can quote value, but best to leave unqout
 Add the desired workspaces to your Dockerfile instructions:
 
 ```bash
-# Install Seurat ecosystem
-RUN chmod +x /var/opt/domino-dockerfile-configs/single-cell/install-seurat.sh && \
-    /var/opt/domino-dockerfile-configs/single-cell/install-seurat.sh $GH_TOKEN
+# Install helpful linux utils
+RUN chmod +x /var/opt/domino-dockerfile-configs/general/install-utils.sh && \
+    /var/opt/domino-dockerfile-configs/general/install-utils.sh
 
-# Other
-RUN chmod +x /var/opt/domino-dockerfile-configs/other-tools/install.sh && \
-    /var/opt/domino-dockerfile-configs/other-tools/install.sh
+# Customize jupyter
+RUN chmod +x /var/opt/domino-dockerfile-configs/general/install-jupyter.sh && \
+    /var/opt/domino-dockerfile-configs/general/install-jupyter.sh
+
+# Install Seurat ecosystem
+RUN chmod +x /var/opt/domino-dockerfile-configs/general/install-utils.sh && \
+    /var/opt/domino-dockerfile-configs/single-cell/install-seurat.sh $GH_TOKEN
 ```
 
 # Notes
