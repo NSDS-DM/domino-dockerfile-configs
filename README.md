@@ -12,10 +12,11 @@ Make sure you using the latest tag/release. **Do not use the develop branch.**
 # Note: Make sure you are using the latest release if you'd like the latest version of the workspaces
 # https://github.com/dominodatalab/workspace-configs/releases/latest
 RUN mkdir -p /var/opt/domino-dockerfile-configs && \
-    wget -O /var/opt/domino-dockerfile-configs/install.sh \
-    https://raw.githubusercontent.com/NSDS-DM/domino-dockerfile-configs/main/single-cell/install-seurat.sh && \
-    chmod +x /var/opt/domino-dockerfile-configs/install.sh
-RUN /var/opt/domino-dockerfile-configs/install.sh
+    wget -O /tmp/main.zip \
+        https://github.com/NSDS-DM/domino-dockerfile-configs/archive/refs/heads/main.zip && \
+        unzip /tmp/main.zip -d /tmp && \
+    cp -Rf /tmp/domino-dockerfile-configs-main/* /var/opt/domino-dockerfile-configs && \
+    rm -rf /tmp/main.zip /tmp/domino-dockerfile-configs-main
 ```
 
 ## Using with access tokens or other variables
